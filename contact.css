@@ -1,0 +1,77 @@
+/* .contact-header {
+    background: #f8f9fa;
+}
+
+.contact-section {
+    background: #ffffff;
+    border-top: 1px solid #e9ecef;
+} */
+
+.contact-section p {
+    transition: 0.3s;
+}
+
+.contact-background {
+    background: url("multimedia/Screenshot\ 2026-02-17\ 222202.jpg") center center/cover no-repeat;
+    position: relative;
+    min-height: 100vh;
+    color: white;
+}
+
+.contact-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-background > * {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-assurance {
+    background: #f8f9fa;
+}
+
+.assurance-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+}
+
+.assurance-icon {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.faq-section {
+    background: #f8f9fa;
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-5px);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    color: #6c757d;
+}
+
+.faq-card.active .faq-answer {
+    max-height: 200px; /* adjust if answers are longer */
+    margin-top: 12px;
+}
+
+

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service | BrightMates</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="multimedia/WhatsApp_Image_2026-02-17_at_8.53.55_AM-removebg-preview.png" alt="BrightMates Logo" class="logo-img">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="book.html">Book Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <div class="background">
+    <section class="booking-header text-center text-white py-5">
+        <div class="container">
+            <h1 class="fw-bold">Book Your Service</h1>
+            <p>
+                Schedule your laundry or cleaning service in just a few simple steps.
+            </p>
+        </div>
+    </section>
+    
+    <section class="booking-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+    
+                    <div class="card border-0 shadow-lg p-5 rounded-4">
+                        <h4 class="mb-4 fw-bold">Service Details</h4>
+    
+                        <form id="bookingForm">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                        
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Service Type</label>
+                                    <select class="form-select" id="service" required>
+                                        <option value="">Select Service</option>
+                                        <option value="Laundry Pickup & Delivery">Laundry Pickup & Delivery</option>
+                                        <option value="Home & Office Cleaning">Home & Office Cleaning</option>
+                                        <option value="Mobile Car Wash">Mobile Car Wash</option>
+                                    </select>
+                                </div>
+                        
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Pickup Date</label>
+                                    <input type="date" class="form-control" id="date" required>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-4">
+                                <label class="form-label">Additional Notes</label>
+                                <textarea class="form-control" rows="3" id="notes"></textarea>
+                            </div>
+                        
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-3">
+                                Review Booking
+                            </button>
+                        
+                        </form>                        
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+   </div>
+
+        <!-- Review Booking Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4">
+        
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Review Your Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <div class="modal-body">
+                    <div id="reviewContent" class="px-2">
+                        <!-- Booking details will appear here -->
+                    </div>
+                </div>
+        
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-primary rounded-3" id="confirmBooking">
+                        Confirm Booking
+                    </button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 text-center p-4">
+        
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="fw-bold">Booking Confirmed</h4>
+                    <p class="text-muted">
+                        Thank you for scheduling your service. Our team will contact you shortly to finalize details.
+                    </p>
+                    <button type="button" class="btn btn-primary rounded-3 mt-3" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+  
+    <section class="trust-section py-5 text-center">
+        <div class="container">
+            <div class="row g-4">
+    
+                <div class="col-md-3 col-6">
+                    <i class="bi bi-clock-history trust-icon"></i>
+                    <h6 class="fw-bold mt-3">On-Time Service</h6>
+                    <p class="small">Reliable pickup and delivery scheduling.</p>
+                </div>
+    
+                <div class="col-md-3 col-6">
+                    <i class="bi bi-shield-check trust-icon"></i>
+                    <h6 class="fw-bold mt-3">Trusted Professionals</h6>
+                    <p class="small">Background-verified and trained staff.</p>
+                </div>
+    
+                <div class="col-md-3 col-6">
+                    <i class="bi bi-cash-coin trust-icon"></i>
+                    <h6 class="fw-bold mt-3">Secure Payments</h6>
+                    <p class="small">Safe and transparent pricing structure.</p>
+                </div>
+    
+                <div class="col-md-3 col-6">
+                    <i class="bi bi-emoji-smile trust-icon"></i>
+                    <h6 class="fw-bold mt-3">Satisfaction Guaranteed</h6>
+                    <p class="small">We ensure quality service every time.</p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-section pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- Company Info -->
+                <div class="col-md-4 mb-4">
+                    <img src="multimedia/WhatsApp_Image_2026-02-17_at_8.53.55_AM-removebg-preview.png" alt="">
+                    <p class="text-muted">
+                        Providing reliable, affordable and professional laundry 
+                        and cleaning services across the city. 
+                        Your convenience is our priority.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="book.html" class="footer-link">Book Service</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-muted">Laundry Pickup & Delivery</li>
+                        <li class="text-muted">Home & Office Cleaning</li>
+                        <li class="text-muted">Mobile Car Wash</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold">Contact Us</h6>
+                    <p class="text-muted mb-1">📍 City-Wide Service</p>
+                    <p class="text-muted mb-1">📞 +234 704 080 0360</p>
+                    <p class="text-muted"><a href="mailto:justbrightmates@gmail.com" class="text-decoration-none text-white">✉ justbrightmates@gmail.com</i></a>
+                    </p>
+    
+                    <div class="social-icons mt-2">
+                        <a href="https://instagram.com/brightmatescleaning" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/brightmatescleaning" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2347040800360?text=Hello%20my %20name%20is___%20I%20would%20like%20to%20make%20an%20inquiry%20about%20___" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/brightmatescleaning" target="_blank">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+                <p class="text-muted small mb-0">
+                    © 2026 BrightMates. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+  
+    <script src="book.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.background {
+    background: url("multimedia/vecteezy_ai-generated-car-washing-advertisment-background-with-copy_37245129.jpg") center center/cover no-repeat;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55); /* dark overlay */
+    z-index: 1;
+}
+
+.background > * {
+    position: relative;
+    z-index: 2;
+}
+
+.background p{
+    color: white;
+}
+.booking-header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.booking-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.9;
+}
+.booking-section {
+    padding-bottom: 80px;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.btn-primary {
+    background-color: #1f6f8b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #145374;
+}
+
+.trust-section {
+    background: #f8f9fa;
+    position: relative;
+    z-index: 2;
+}
+
+.trust-icon {
+    font-size: 2rem;
+    color: #1f6f8b;
+}
+
+
+
