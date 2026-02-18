@@ -1,10 +1,19 @@
 .background {
     background: url("multimedia/vecteezy_ai-generated-car-washing-advertisment-background-with-copy_37245129.jpg") center center/cover no-repeat;
+    animation: slowZoom 15s ease-in-out infinite alternate;
     position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
 }
 
 .background::before {
@@ -40,7 +49,33 @@
 .booking-section {
     padding-bottom: 80px;
 }
+/* HERO ANIMATION */
+.hero-title {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: dropFade 1s ease forwards;
+}
 
+.hero-subtext {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: riseFade 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes dropFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes riseFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .card {
     background: rgba(255, 255, 255, 0.95);
@@ -81,5 +116,18 @@
     color: #1f6f8b;
 }
 
+@media (max-width: 768px) {
 
+    .booking-section .card {
+        padding: 25px !important;
+    }
 
+    .trust-section .col-md-3 {
+        text-align: center;
+    }
+
+    .trust-icon {
+        font-size: 1.5rem;
+    }
+
+}

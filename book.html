@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="book.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <nav class='navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top' data-aos="fade-down">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="multimedia/WhatsApp_Image_2026-02-17_at_8.53.55_AM-removebg-preview.png" alt="BrightMates Logo" class="logo-img">
@@ -23,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link " href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="book.html">Book Service</a>
@@ -39,19 +40,20 @@
    <div class="background">
     <section class="booking-header text-center text-white py-5">
         <div class="container">
-            <h1 class="fw-bold">Book Your Service</h1>
-            <p>
+            <h1 class="fw-bold hero-title">Book Your Service</h1>
+            <p class="hero-subtext">
                 Schedule your laundry or cleaning service in just a few simple steps.
             </p>
         </div>
     </section>
+    
     
     <section class="booking-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
     
-                    <div class="card border-0 shadow-lg p-5 rounded-4">
+                    <div class="card border-0 shadow-lg p-5 rounded-4" data-aos="zoom-in-up" data-aos-duration="1000">
                         <h4 class="mb-4 fw-bold">Service Details</h4>
     
                         <form id="bookingForm">
@@ -192,7 +194,7 @@
     </section>
     
     <!-- ================= FOOTER ================= -->
-    <footer class="footer-section pt-5 pb-3">
+    <footer class="footer-section pt-5 pb-3"  data-aos="fade-up">
         <div class="container">
             <div class="row">
 
@@ -230,22 +232,22 @@
                     <h6 class="fw-bold">Contact Us</h6>
                     <p class="text-muted mb-1">📍 City-Wide Service</p>
                     <p class="text-muted mb-1">📞 +234 704 080 0360</p>
-                    <p class="text-muted"><a href="mailto:justbrightmates@gmail.com" class="text-decoration-none text-white">✉ justbrightmates@gmail.com</i></a>
+                    <p class="text-muted"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=brightmatescleaning@gmail.com&su=Service%20Inquiry&body=Hello%20my%20name%20is...%20and%20i'll%20like%20to%20make%20an%20enquiry%20about%20..."  target="_blank" class="text-decoration-none text-white">✉ justbrightmates@gmail.com</i></a>
                     </p>
     
                     <div class="social-icons mt-2">
-                        <a href="https://instagram.com/brightmatescleaning" target="_blank">
+                        <!-- <a href="https://instagram.com/brightmatescleaning" target="_blank">
                             <i class="bi bi-facebook"></i>
-                        </a>
+                        </a> -->
                         <a href="https://instagram.com/brightmatescleaning" target="_blank">
                             <i class="bi bi-instagram"></i>
                         </a>
                         <a href="https://wa.me/2347040800360?text=Hello%20my %20name%20is___%20I%20would%20like%20to%20make%20an%20inquiry%20about%20___" target="_blank">
                             <i class="bi bi-whatsapp"></i>
                         </a>
-                        <a href="https://instagram.com/brightmatescleaning" target="_blank">
-                            <i class="bi bi-twitter"></i>
-                        </a>
+                        <!-- <a href="https://instagram.com/brightmatescleaning" target="_blank">
+                            <i class="bi bi-twitter"></i> 
+                        </a>-->
                         
                     </div>
                 </div>
@@ -262,8 +264,8 @@
         </div>
     </footer>
 
-    
-  
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="style.js"></script>
     <script src="book.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
