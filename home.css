@@ -1,11 +1,12 @@
 /* ================= HERO SECTION ================= */
 .hero-section {
     position: relative;
-    height: 100vh;
     background: url("multimedia/Screenshot\ 2026-02-17\ 080832.jpg") center center/cover no-repeat;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 80px 20px;
 }
 
 /* Dark overlay for readability */
@@ -96,5 +97,33 @@
     color: #1f6f8b; /* brand blue */
 }
 
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.95rem;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.85rem;
+    }
+}
 
 

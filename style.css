@@ -63,6 +63,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 75px;
+    overflow-x: hidden;
 }
 
 .navbar-brand {
@@ -155,6 +156,13 @@ body {
     .footer-section .row > div {
         margin-bottom: 30px;
     }
+
+    .footer-section .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
 }
 
 /* Mobile */
@@ -175,11 +183,24 @@ body {
     .btn-primary {
         padding: 12px;
     }
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
 
+    /* body {
+        padding-top: 80px;
+    } */
     .hero-title {
         font-size: 1.6rem;
     }
