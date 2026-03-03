@@ -107,7 +107,7 @@
 }
 
 .faq-card.active .faq-answer {
-    max-height: 200px; /* adjust if answers are longer */
+    max-height: 1000px; /* adjust if answers are longer */
     margin-top: 12px;
 }
 .faq-card {

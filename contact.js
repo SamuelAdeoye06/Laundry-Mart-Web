@@ -7,8 +7,23 @@ document.querySelector(".contact-section form").addEventListener("submit", funct
     this.reset();
 });
 
-document.querySelectorAll(".faq-card").forEach(card => {
-    card.addEventListener("click", () => {
+// document.querySelectorAll(".faq-card").forEach(card => {
+//     card.addEventListener("click", () => {
+//         card.classList.toggle("active");
+//     });
+// });
+
+document.querySelectorAll(".faq-card").forEach(question => {
+    question.addEventListener("click", function () {
+
+        const card = this.closest(".faq-card");
+
+        document.querySelectorAll(".faq-card").forEach(otherCard => {
+            if (otherCard !== card) {
+                otherCard.classList.remove("active");
+            }
+        });
+
         card.classList.toggle("active");
     });
 });
